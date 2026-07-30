@@ -136,3 +136,20 @@ section, .hero {
         transform:scale(1);
     }
 }
+#themeBtn{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.light-mode{
+    background:#f8fafc;
+    color:#111827;
+}
+
+.light-mode footer{
+    background:#e5e7eb;
+}
