@@ -107,3 +107,32 @@ background:#111827;
     margin-top: 15px;
     cursor: pointer;
 }
+section, .hero {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.profile {
+    animation: zoomIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}
