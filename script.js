@@ -10,3 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
     hero.style.transform = "translateY(0)";
   }, 200);
 });
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.onclick = function(){
+
+document.body.classList.toggle("light-mode");
+
+if(document.body.classList.contains("light-mode")){
+    themeBtn.innerHTML="🌙 Dark Mode";
+}
+else{
+    themeBtn.innerHTML="☀️ Light Mode";
+}
+
+}
