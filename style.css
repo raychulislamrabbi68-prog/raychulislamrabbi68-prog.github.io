@@ -79,3 +79,31 @@ text-align:center;
 padding:25px;
 background:#111827;
 }
+#contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Poppins, sans-serif;
+}
+
+#contact textarea {
+    resize: none;
+}
+
+#contact button {
+    margin-top: 15px;
+    cursor: pointer;
+}
