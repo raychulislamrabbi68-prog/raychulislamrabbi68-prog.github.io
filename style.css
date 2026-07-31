@@ -195,14 +195,7 @@ section{
 }
 
 }
-.logo{
-    position:absolute;
-    top:20px;
-    left:20px;
-    font-size:22px;
-    font-weight:bold;
-    color:#38bdf8;
-}
+
 #social a{
     display:inline-block;
     padding:12px 25px;
