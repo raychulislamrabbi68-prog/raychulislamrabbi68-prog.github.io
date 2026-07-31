@@ -27,7 +27,16 @@ else{
 const menuBtn = document.querySelector(".menu-btn");
 const sideMenu = document.querySelector(".side-menu");
 
+const overlay = document.querySelector(".overlay");
+
 menuBtn.onclick = function(){
     sideMenu.classList.toggle("active");
     menuBtn.classList.toggle("open");
+    overlay.classList.toggle("active");
+}
+
+overlay.onclick = function(){
+    sideMenu.classList.remove("active");
+    menuBtn.classList.remove("open");
+    overlay.classList.remove("active");
 }
