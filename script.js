@@ -24,3 +24,10 @@ else{
 }
 
 }
+const menuBtn = document.querySelector(".menu-btn");
+const sideMenu = document.querySelector(".side-menu");
+
+menuBtn.onclick = function(){
+    sideMenu.classList.toggle("active");
+    menuBtn.classList.toggle("open");
+}
