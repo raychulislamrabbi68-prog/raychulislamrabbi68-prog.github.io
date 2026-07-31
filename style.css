@@ -401,3 +401,21 @@ text-shadow:
     0 0 40px rgba(56,189,248,.25);
     transform:scale(1.08);
 }
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(4px);
+    opacity:0;
+    visibility:hidden;
+    transition:.4s;
+    z-index:997;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
+}
