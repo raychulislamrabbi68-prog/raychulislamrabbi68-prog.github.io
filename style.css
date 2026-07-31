@@ -68,11 +68,21 @@ background:#0284c7;
 }
 
 section{
-    padding:80px 30px;
-    max-width:1000px;
+    max-width:700px;
     margin:0 auto;
+    padding:80px 20px;
+    text-align:center;
+}
+#social{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
+#social a{
+    width:240px;
+    text-align:center;
+}
 h2{
 font-size:35px;
 margin-bottom:20px;
