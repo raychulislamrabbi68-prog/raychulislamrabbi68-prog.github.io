@@ -68,9 +68,9 @@ background:#0284c7;
 }
 
 section{
-padding:80px 20px;
-max-width:1000px;
-margin:auto;
+    padding:80px 30px;
+    max-width:1000px;
+    margin:0 auto;
 }
 
 h2{
