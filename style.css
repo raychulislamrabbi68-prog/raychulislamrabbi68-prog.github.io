@@ -327,3 +327,14 @@ text-shadow:
     transform:translateX(10px);
     color:#38bdf8;
 }
+.menu-btn.open span:nth-child(1){
+    transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-btn.open span:nth-child(2){
+    opacity:0;
+}
+
+.menu-btn.open span:nth-child(3){
+    transform:rotate(-45deg) translate(5px,-5px);
+}
