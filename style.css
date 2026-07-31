@@ -1,4 +1,4 @@
-*{
+u*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -264,4 +264,66 @@ text-shadow:
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     text-shadow:none;
+}
+.menu-btn{
+    position:fixed;
+    top:25px;
+    left:25px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+    z-index:999;
+    box-shadow:0 0 20px rgba(56,189,248,.25);
+}
+
+.menu-btn span{
+    width:24px;
+    height:2px;
+    background:#38bdf8;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.side-menu{
+    position:fixed;
+    top:0;
+    left:-300px;
+    width:280px;
+    height:100vh;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(15px);
+    padding:90px 30px;
+    transition:.5s;
+    z-index:998;
+}
+
+.side-menu.active{
+    left:0;
+}
+
+.side-menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    margin:25px 0;
+    transition:.3s;
+}
+
+.side-menu a i{
+    width:30px;
+    color:#38bdf8;
+}
+
+.side-menu a:hover{
+    transform:translateX(10px);
+    color:#38bdf8;
 }
