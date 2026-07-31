@@ -229,12 +229,11 @@ section{
     text-align:center;
     letter-spacing:3px;
     margin-bottom:18px;
+background:linear-gradient(90deg,#2563eb,#38bdf8,#1d4ed8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 
-    background:linear-gradient(90deg,#dbeafe,#7dd3fc,#dbeafe);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:0 0 12px rgba(56,189,248,.20);
+text-shadow:0 2px 8px rgba(37,99,235,.25);
 
     animation:softGlow 4s ease-in-out infinite;
 }
