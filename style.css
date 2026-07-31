@@ -203,3 +203,17 @@ section{
     font-weight:bold;
     color:#38bdf8;
 }
+#social a{
+    display:inline-block;
+    padding:12px 25px;
+    margin:10px;
+    border-radius:30px;
+    background:#1e293b;
+    transition:0.3s;
+}
+
+#social a:hover{
+    background:#38bdf8;
+    color:white;
+    transform:translateY(-5px);
+}
