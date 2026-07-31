@@ -210,3 +210,37 @@ section{
     color:white;
     transform:translateY(-5px);
 }
+.welcome-text{
+    font-family:'Cinzel', serif;
+    font-size:19px;
+    font-weight:600;
+    text-align:center;
+    letter-spacing:3px;
+    margin-bottom:18px;
+
+    background:linear-gradient(90deg,#dbeafe,#7dd3fc,#dbeafe);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:0 0 12px rgba(56,189,248,.20);
+
+    animation:softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow{
+    0%,100%{
+        opacity:.85;
+        transform:translateY(0);
+    }
+    50%{
+        opacity:1;
+        transform:translateY(-3px);
+    }
+}
+
+@media (max-width:600px){
+    .welcome-text{
+        font-size:16px;
+        letter-spacing:2px;
+    }
+}
