@@ -225,7 +225,7 @@ section{
 .welcome-text{
     font-family:'Cinzel', serif;
     font-size:19px;
-    font-weight:600;
+    font-weight:700;
     text-align:center;
     letter-spacing:3px;
     margin-top:-50px;
@@ -234,7 +234,10 @@ background:linear-gradient(90deg,#2563eb,#38bdf8,#1d4ed8);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 
-text-shadow:0 2px 8px rgba(37,99,235,.25);
+text-shadow:
+0 1px 2px rgba(255,255,255,.15),
+0 0 12px rgba(56,189,248,.25),
+0 0 24px rgba(56,189,248,.12);
 
     animation:softGlow 4s ease-in-out infinite;
 }
