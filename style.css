@@ -255,3 +255,9 @@ text-shadow:0 2px 8px rgba(37,99,235,.25);
         letter-spacing:2px;
     }
 }
+.light-mode .welcome-text{
+    background:linear-gradient(90deg,#1e40af,#2563eb,#1e40af);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:none;
+}
