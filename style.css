@@ -429,3 +429,29 @@ text-shadow:
     opacity:1;
     visibility:visible;
 }
+.light-mode .side-menu{
+    background:#ffffff;
+    color:#111827;
+    box-shadow:0 0 25px rgba(0,0,0,.12);
+}
+
+.light-mode .side-menu a{
+    color:#111827;
+}
+
+.light-mode .side-menu a i{
+    color:#2563eb;
+}
+
+.light-mode .menu-btn{
+    background:#ffffff;
+    box-shadow:0 0 20px rgba(37,99,235,.15);
+}
+
+.light-mode .menu-btn span{
+    background:#2563eb;
+}
+
+.light-mode .overlay{
+    background:rgba(255,255,255,.35);
+}
