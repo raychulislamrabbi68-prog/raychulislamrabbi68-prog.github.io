@@ -66,14 +66,14 @@ const successMessage=document.getElementById("successMessage");
 
 if(response.ok){
 
-successMessage.style.display="block";
-
 successMessage.innerHTML="✅ Thank you! Your message has been sent.";
+
+successMessage.classList.add("show");
 
 contactForm.reset();
 
 setTimeout(()=>{
-successMessage.style.display="none";
+successMessage.classList.remove("show");
 },5000);
 
 }else{
