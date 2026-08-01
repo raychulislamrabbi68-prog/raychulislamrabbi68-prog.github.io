@@ -40,3 +40,12 @@ overlay.onclick = function(){
     menuBtn.classList.remove("open");
     overlay.classList.remove("active");
 }
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function () {
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "block";
+        }, 1000);
+    });
+}
