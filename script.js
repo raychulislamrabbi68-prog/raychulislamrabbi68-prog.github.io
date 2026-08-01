@@ -101,3 +101,14 @@ menuLinks.forEach(link => {
         overlay.classList.remove("active");
     }
 });
+document.querySelectorAll(".side-menu a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        sideMenu.classList.remove("active");
+        overlay.classList.remove("active");
+        menuBtn.classList.remove("open");
+
+    });
+
+});
