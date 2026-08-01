@@ -83,7 +83,7 @@ const status = document.getElementById("status");
 
 
 uploadBtn.addEventListener("click", async () => {
-
+console.log("Publish button clicked");
     const title = titleInput.value;
     const content = contentInput.value;
 
