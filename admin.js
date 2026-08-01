@@ -15,3 +15,64 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 console.log("✅ Firebase Connected");
+// ===============================
+// Cloudinary Image Upload
+// ===============================
+
+const cloudName = "cxrdogvs";
+const uploadPreset = "blog_upload";
+
+const uploadBtn = document.getElementById("uploadImageBtn");
+const imageInput = document.getElementById("blogImage");
+const imagePreview = document.getElementById("imagePreview");
+
+let imageURL = "";
+
+if (uploadBtn) {
+
+  uploadBtn.addEventListener("click", () => {
+
+    const file = imageInput.files[0];
+
+    if (!file) {
+      alert("Please select an image first");
+      return;
+    }
+
+    const formData = new FormData();
+
+    formData.append("file", file);
+    formData.append("upload_preset", uploadPreset);
+
+
+    fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: "POST",
+      body: formData
+    })
+
+    .then(response => response.json())
+
+    .then(data => {
+
+      imageURL = data.secure_url;
+
+      console.log("Cloudinary Image URL:", imageURL);
+
+      if (imagePreview) {
+        imagePreview.src = imageURL;
+      }
+
+      alert("✅ Image Upload Successful");
+
+    })
+
+    .catch(error => {
+
+      console.log(error);
+      alert("❌ Image Upload Failed");
+
+    });
+
+  });
+
+}
