@@ -67,7 +67,7 @@ const successMessage=document.getElementById("successMessage");
 if(response.ok){
 
 successMessage.innerHTML="✅ Thank you! Your message has been sent.";
-
+successMessage.style.display = "block";
 successMessage.classList.add("show");
 
 contactForm.reset();
