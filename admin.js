@@ -1,6 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
-
+import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-database.js";
 const firebaseConfig = {
   apiKey: "AIzaSyCirzx_QMyloG6ummoNBtRzhrgxfjcvevs",
   authDomain: "raychul-islam-rabbi-website.firebaseapp.com",
