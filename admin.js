@@ -22,9 +22,9 @@ console.log("✅ Firebase Connected");
 const cloudName = "cxrdogvs";
 const uploadPreset = "blog_upload";
 
-const uploadBtn = document.getElementById("uploadImageBtn");
-const imageInput = document.getElementById("blogImage");
-const imagePreview = document.getElementById("imagePreview");
+const uploadBtn = document.getElementById("uploadBtn");
+const imageInput = document.getElementById("image");
+const imagePreview = null;
 
 let imageURL = "";
 
