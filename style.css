@@ -455,3 +455,67 @@ text-shadow:
 .light-mode .overlay{
     background:rgba(255,255,255,.35);
 }
+#contact{
+    max-width:700px;
+    margin:60px auto;
+    padding:30px;
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+#contact h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#contact form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#contact label{
+    font-weight:600;
+    margin-bottom:-10px;
+}
+
+#contact input,
+#contact textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:12px;
+    background:rgba(255,255,255,.08);
+    color:inherit;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder{
+    color:#9ca3af;
+}
+
+#contact input:focus,
+#contact textarea:focus{
+    outline:none;
+    border-color:#3b82f6;
+    box-shadow:0 0 10px rgba(59,130,246,.3);
+}
+
+#contact textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.light-mode #contact{
+    background:#ffffff;
+}
+
+.light-mode #contact input,
+.light-mode #contact textarea{
+    background:#f9fafb;
+    border:1px solid #d1d5db;
+    color:#111827;
+}
