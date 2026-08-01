@@ -561,3 +561,13 @@ text-shadow:
 .blog-card p{
     margin-bottom:20px;
 }
+.blog-image{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.blog-date{
+    font-size:14px;
+    opacity:.7;
+}
