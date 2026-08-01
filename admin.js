@@ -73,3 +73,53 @@ if (uploadBtn) {
   });
 
 }
+// ===============================
+// Firebase Blog Save
+// ===============================
+
+const titleInput = document.getElementById("title");
+const contentInput = document.getElementById("content");
+const status = document.getElementById("status");
+
+
+uploadBtn.addEventListener("click", async () => {
+
+    const title = titleInput.value;
+    const content = contentInput.value;
+
+
+    if(!title || !content || !imageURL){
+
+        status.innerHTML = "Please complete all fields";
+        return;
+
+    }
+
+
+    try {
+
+        const blogRef = push(ref(db, "blogs"));
+
+        await set(blogRef, {
+
+            title: title,
+            content: content,
+            image: imageURL,
+            date: new Date().toISOString()
+
+        });
+
+
+        status.innerHTML = "✅ Blog Published Successfully";
+
+
+    } catch(error){
+
+        console.log(error);
+
+        status.innerHTML = "❌ Error Saving Blog";
+
+    }
+
+
+});
