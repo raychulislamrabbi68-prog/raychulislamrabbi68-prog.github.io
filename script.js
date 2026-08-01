@@ -43,9 +43,49 @@ overlay.onclick = function(){
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
-    contactForm.addEventListener("submit", function () {
-        setTimeout(() => {
-            document.getElementById("successMessage").style.display = "block";
-        }, 1000);
-    });
+
+contactForm.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const formData = new FormData(contactForm);
+
+const response = await fetch(contactForm.action,{
+
+method:"POST",
+
+body:formData,
+
+headers:{
+"Accept":"application/json"
+}
+
+});
+
+const successMessage=document.getElementById("successMessage");
+
+if(response.ok){
+
+successMessage.style.display="block";
+
+successMessage.innerHTML="✅ Thank you! Your message has been sent.";
+
+contactForm.reset();
+
+setTimeout(()=>{
+successMessage.style.display="none";
+},5000);
+
+}else{
+
+successMessage.style.display="block";
+
+successMessage.style.color="red";
+
+successMessage.innerHTML="❌ Something went wrong. Please try again.";
+
+}
+
+});
+
 }
