@@ -80,10 +80,7 @@ contactForm.reset();
 
 setTimeout(() => {
     successMessage.classList.remove("show");
-
-    setTimeout(() => {
-        successMessage.style.display = "none";
-    }, 500);
+}, 5000);
 
 }, 5000);
 
