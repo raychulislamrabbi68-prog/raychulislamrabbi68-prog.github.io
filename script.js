@@ -67,11 +67,13 @@ const successMessage=document.getElementById("successMessage");
 if(response.ok){
 
 successMessage.innerHTML = "✅ Thank you! Your message has been sent.";
-successMessage.style.display = "block";
 
-// Browser-কে আগে display:block প্রয়োগ করতে দাও
-requestAnimationFrame(() => {
-    successMessage.classList.add("show");
+successMessage.classList.remove("show");
+
+// Animation আবার শুরু করার জন্য
+void successMessage.offsetWidth;
+
+successMessage.classList.add("show");
 });
 
 contactForm.reset();
