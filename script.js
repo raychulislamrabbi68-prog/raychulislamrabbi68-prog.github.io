@@ -92,3 +92,12 @@ if (contactForm) {
     });
 
 }
+const menuLinks = document.querySelectorAll(".side-menu a");
+
+menuLinks.forEach(link => {
+    link.onclick = function(){
+        sideMenu.classList.remove("active");
+        menuBtn.classList.remove("open");
+        overlay.classList.remove("active");
+    }
+});
