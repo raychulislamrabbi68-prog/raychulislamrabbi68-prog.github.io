@@ -74,7 +74,7 @@ successMessage.classList.remove("show");
 void successMessage.offsetWidth;
 
 successMessage.classList.add("show");
-});
+
 
 contactForm.reset();
 
