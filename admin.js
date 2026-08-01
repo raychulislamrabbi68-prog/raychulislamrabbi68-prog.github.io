@@ -58,9 +58,7 @@ if (uploadBtn) {
 
       console.log("Cloudinary Image URL:", imageURL);
 
-      if (imagePreview) {
-        imagePreview.src = imageURL;
-      }
+   
 
       alert("✅ Image Upload Successful");
 
