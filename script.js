@@ -41,59 +41,54 @@ overlay.onclick = function(){
     overlay.classList.remove("active");
 }
 const contactForm = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
 
 if (contactForm) {
 
-contactForm.addEventListener("submit", async function(e){
+    contactForm.addEventListener("submit", async function (e) {
 
-e.preventDefault();
+        e.preventDefault();
 
-const formData = new FormData(contactForm);
+        const formData = new FormData(contactForm);
 
-const response = await fetch(contactForm.action,{
+        try {
 
-method:"POST",
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
 
-body:formData,
+            if (response.ok) {
 
-headers:{
-"Accept":"application/json"
-}
+                contactForm.reset();
 
-});
+                successMessage.textContent = "✅ Thank you! Your message has been sent.";
 
-const successMessage=document.getElementById("successMessage");
+                successMessage.classList.remove("show");
+                void successMessage.offsetWidth;
+                successMessage.classList.add("show");
 
-if(response.ok){
+                setTimeout(() => {
+                    successMessage.classList.remove("show");
+                }, 5000);
 
-successMessage.innerHTML = "✅ Thank you! Your message has been sent.";
+            } else {
 
-successMessage.classList.remove("show");
+                successMessage.textContent = "❌ Something went wrong. Please try again.";
+                successMessage.classList.add("show");
 
-// Animation আবার শুরু করার জন্য
-void successMessage.offsetWidth;
+            }
 
-successMessage.classList.add("show");
+        } catch (error) {
 
+            successMessage.textContent = "❌ Network error. Please try again.";
+            successMessage.classList.add("show");
 
-contactForm.reset();
+        }
 
-setTimeout(() => {
-    successMessage.classList.remove("show");
-}, 5000);
-
-}, 5000);
-
-}else{
-
-successMessage.style.display="block";
-
-successMessage.style.color="red";
-
-successMessage.innerHTML="❌ Something went wrong. Please try again.";
-
-}
-
-});
+    });
 
 }
