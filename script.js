@@ -72,9 +72,14 @@ successMessage.classList.add("show");
 
 contactForm.reset();
 
-setTimeout(()=>{
-successMessage.classList.remove("show");
-},5000);
+setTimeout(() => {
+    successMessage.classList.remove("show");
+
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 500);
+
+}, 5000);
 
 }else{
 
