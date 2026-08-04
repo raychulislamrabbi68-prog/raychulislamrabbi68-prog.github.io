@@ -119,10 +119,8 @@ if (
     !keywords ||
     !summary ||
     !contentEn ||
-    !contentBn ||
- 
+    !contentBn
 ){
-
         status.innerHTML = "Please complete all fields";
         return;
 
