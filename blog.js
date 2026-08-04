@@ -24,7 +24,7 @@ let allBlogs = [];
 
 get(ref(db, "blogs"))
 .then((snapshot)=>{
-
+console.log(snapshot.val());
 if(snapshot.exists()){
 
 allBlogs = Object.values(snapshot.val());
