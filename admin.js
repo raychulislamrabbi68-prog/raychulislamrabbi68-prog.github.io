@@ -120,14 +120,21 @@ if (
 
         const blogRef = push(ref(db, "blogs"));
 
-        await set(blogRef, {
+await set(blogRef, {
 
-            title: title,
-            content: content,
-            image: imageURL,
-            date: new Date().toISOString()
+    title: title,
+    category: category,
+    seoTitle: seoTitle,
+    metaDescription: metaDescription,
+    keywords: keywords,
 
-        });
+    contentEn: contentEn,
+    contentBn: contentBn,
+
+    image: imageURL,
+    date: new Date().toISOString()
+
+});
 
 
         status.innerHTML = "✅ Blog Published Successfully";
