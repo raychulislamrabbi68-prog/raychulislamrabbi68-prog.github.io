@@ -126,3 +126,53 @@ uploadBtnEn.addEventListener("click", async () => {
   }
 
 });
+publishBtn.addEventListener("click", async () => {
+
+  const blogData = {
+
+    author: "Raychul Islam Rabbi",
+
+    titleBn: titleBn.value.trim(),
+    titleEn: titleEn.value.trim(),
+
+    categoryBn: categoryBn.value,
+    categoryEn: categoryEn.value,
+
+    seoTitleBn: seoTitleBn.value.trim(),
+    seoTitleEn: seoTitleEn.value.trim(),
+
+    metaDescriptionBn: metaDescriptionBn.value.trim(),
+    metaDescriptionEn: metaDescriptionEn.value.trim(),
+
+    keywordsBn: keywordsBn.value.trim(),
+    keywordsEn: keywordsEn.value.trim(),
+
+    summaryBn: summaryBn.value.trim(),
+    summaryEn: summaryEn.value.trim(),
+
+    contentBn: contentBn.value.trim(),
+    contentEn: contentEn.value.trim(),
+
+    imageBn: imageBnURL,
+    imageEn: imageEnURL,
+
+    date: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+
+  };
+
+  for (const key in blogData) {
+
+    if (
+      key !== "author" &&
+      key !== "date" &&
+      key !== "updatedAt" &&
+      !blogData[key]
+    ) {
+
+      status.innerHTML = "❌ Please complete all fields.";
+      return;
+
+    }
+
+  }
