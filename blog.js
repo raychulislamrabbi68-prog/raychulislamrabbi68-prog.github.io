@@ -15,3 +15,17 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 console.log("Blog page connected to Firebase");
+const blogRef = ref(db, "blogs");
+
+get(blogRef)
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      const blogs = snapshot.val();
+      console.log(blogs);
+    } else {
+      console.log("No blogs found");
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
