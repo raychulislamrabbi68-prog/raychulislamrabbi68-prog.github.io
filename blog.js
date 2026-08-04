@@ -18,9 +18,10 @@ alert("Firebase Connected");
 const blogContainer = document.getElementById("blog-container");
 
 const banglaBtn = document.getElementById("banglaBtn");
+const englishBtn = document.getElementById("englishBtn");
+
 console.log(banglaBtn);
 console.log(englishBtn);
-const englishBtn = document.getElementById("englishBtn");
 
 let allBlogs = [];
 
