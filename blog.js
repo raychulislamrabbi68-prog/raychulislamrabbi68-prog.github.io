@@ -17,6 +17,8 @@ const db = getDatabase(app);
 const blogContainer = document.getElementById("blog-container");
 
 const banglaBtn = document.getElementById("banglaBtn");
+console.log(banglaBtn);
+console.log(englishBtn);
 const englishBtn = document.getElementById("englishBtn");
 
 let allBlogs = [];
