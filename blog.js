@@ -37,10 +37,21 @@ get(blogRef)
 
         <h2>${blog.title}</h2>
 
-        <p>${blog.summary}</p>
+<p>${blog.summary}</p>
 
-        <p>${blog.contentBn}</p>
+<div>
+<button onclick="showEnglish('${blog.contentEn}')">
+🇺🇸 English
+</button>
 
+<button onclick="showBangla('${blog.contentBn}')">
+🇧🇩 বাংলা
+</button>
+</div>
+
+<p id="languageText">
+${blog.contentBn}
+</p>
       </div>
 
       `;
