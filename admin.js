@@ -82,7 +82,7 @@ const categoryInput = document.getElementById("category");
 const seoTitleInput = document.getElementById("seoTitle");
 const metaDescriptionInput = document.getElementById("metaDescription");
 const keywordsInput = document.getElementById("keywords");
-
+const summaryInput = document.getElementById("summary");
 const contentEnInput = document.getElementById("contentEn");
 const contentBnInput = document.getElementById("contentBn");
 const status = document.getElementById("status");
