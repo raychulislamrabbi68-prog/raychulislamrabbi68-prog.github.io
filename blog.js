@@ -52,9 +52,7 @@ const id = Date.now();
 ${blog.contentBn}
 </p>
 
-<p id="languageText">
-${blog.contentBn}
-</p>
+
       </div>
 
       `;
