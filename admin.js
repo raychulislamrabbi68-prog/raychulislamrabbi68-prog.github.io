@@ -109,7 +109,7 @@ if (
     !summary ||
     !contentEn ||
     !contentBn ||
-    !imageURL
+ 
 ){
 
         status.innerHTML = "Please complete all fields";
