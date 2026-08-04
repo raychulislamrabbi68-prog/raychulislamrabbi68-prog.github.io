@@ -90,7 +90,7 @@ const status = document.getElementById("status");
 
 
 publishBtn.addEventListener("click", async () => {
-  alert("Button Working");
+alert("Clicked");
 console.log("Publish button clicked");
 const title = titleInput.value.trim();
 const category = categoryInput.value;
