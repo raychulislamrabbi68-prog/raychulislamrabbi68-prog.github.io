@@ -29,3 +29,46 @@ get(blogRef)
   .catch((error) => {
     console.log(error);
   });
+const blogContainer = document.getElementById("blog-container");
+
+const blogRef = ref(db, "blogs");
+
+get(blogRef)
+  .then((snapshot) => {
+
+    if (snapshot.exists()) {
+
+      const blogs = snapshot.val();
+
+      blogContainer.innerHTML = "";
+
+      Object.values(blogs).forEach((blog) => {
+
+        blogContainer.innerHTML += `
+          <div class="blog-card">
+
+            <img src="${blog.image}" alt="Blog Image">
+
+            <h2>${blog.title}</h2>
+
+            <p>${blog.content}</p>
+
+          </div>
+        `;
+
+      });
+
+    } else {
+
+      blogContainer.innerHTML = "<h2>No Blog Found</h2>";
+
+    }
+
+  })
+  .catch((error) => {
+
+    console.log(error);
+
+    blogContainer.innerHTML = "<h2>Error Loading Blog</h2>";
+
+  });
