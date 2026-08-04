@@ -90,9 +90,14 @@ const status = document.getElementById("status");
 
 uploadBtn.addEventListener("click", async () => {
 console.log("Publish button clicked");
-    const title = titleInput.value;
-    const content = contentInput.value;
+const title = titleInput.value.trim();
+const category = categoryInput.value;
+const seoTitle = seoTitleInput.value.trim();
+const metaDescription = metaDescriptionInput.value.trim();
+const keywords = keywordsInput.value.trim();
 
+const contentEn = contentEnInput.value.trim();
+const contentBn = contentBnInput.value.trim();
 
     if(!title || !content || !imageURL){
 
