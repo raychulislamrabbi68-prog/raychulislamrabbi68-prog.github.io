@@ -121,7 +121,7 @@ if (
         const blogRef = push(ref(db, "blogs"));
 
 await set(blogRef, {
-
+author: "Raychul Islam Rabbi",
     title: title,
     category: category,
     seoTitle: seoTitle,
