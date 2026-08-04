@@ -99,7 +99,16 @@ const keywords = keywordsInput.value.trim();
 const summary = summaryInput.value.trim();
 const contentEn = contentEnInput.value.trim();
 const contentBn = contentBnInput.value.trim();
-
+console.log({
+title,
+category,
+seoTitle,
+metaDescription,
+keywords,
+summary,
+contentEn,
+contentBn
+});
 if (
     !title ||
     !category ||
