@@ -99,7 +99,16 @@ const keywords = keywordsInput.value.trim();
 const contentEn = contentEnInput.value.trim();
 const contentBn = contentBnInput.value.trim();
 
-    if(!title || !content || !imageURL){
+if (
+    !title ||
+    !category ||
+    !seoTitle ||
+    !metaDescription ||
+    !keywords ||
+    !contentEn ||
+    !contentBn ||
+    !imageURL
+){
 
         status.innerHTML = "Please complete all fields";
         return;
