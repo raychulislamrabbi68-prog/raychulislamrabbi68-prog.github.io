@@ -59,19 +59,24 @@ blogContainer.innerHTML = "";
 
 allBlogs.forEach((blog)=>{
 
-
+let title = "";
+let summary = "";
 let content = "";
+
 
 if(language === "en"){
 
+title = blog.titleEn;
+summary = blog.summaryEn;
 content = blog.contentEn;
 
 }else{
 
+title = blog.titleBn;
+summary = blog.summaryBn;
 content = blog.contentBn;
 
 }
-
 
 
 blogContainer.innerHTML += `
@@ -80,9 +85,9 @@ blogContainer.innerHTML += `
 
 <img src="${blog.image}" alt="Blog Image">
 
-<h2>${blog.title}</h2>
+<h2>${title}</h2>
 
-<p>${blog.summary}</p>
+<p>${summary}</p>
 
 <p>${content}</p>
 
@@ -90,12 +95,10 @@ blogContainer.innerHTML += `
 
 `;
 
-
 });
 
 
 }
-
 
 
 banglaBtn.addEventListener("click",()=>{
