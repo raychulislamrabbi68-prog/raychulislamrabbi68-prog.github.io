@@ -105,6 +105,7 @@ if (
     !seoTitle ||
     !metaDescription ||
     !keywords ||
+    !summary ||
     !contentEn ||
     !contentBn ||
     !imageURL
