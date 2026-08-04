@@ -51,3 +51,78 @@ const publishBtn = document.getElementById("publishBtn");
 const status = document.getElementById("status");
 
 console.log("✅ Firebase Connected");
+async function uploadImage(file) {
+
+  const formData = new FormData();
+
+  formData.append("file", file);
+  formData.append("upload_preset", uploadPreset);
+
+  const response = await fetch(
+    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+    {
+      method: "POST",
+      body: formData
+    }
+  );
+
+  const data = await response.json();
+
+  if (!data.secure_url) {
+    throw new Error("Image upload failed");
+  }
+
+  return data.secure_url;
+}
+
+
+uploadBtnBn.addEventListener("click", async () => {
+
+  if (!imageBn.files[0]) {
+    alert("বাংলা Image নির্বাচন করুন");
+    return;
+  }
+
+  try {
+
+    imageBnURL = await uploadImage(imageBn.files[0]);
+
+    alert("✅ বাংলা Image Upload Complete");
+
+    console.log(imageBnURL);
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("❌ বাংলা Image Upload Failed");
+
+  }
+
+});
+
+
+uploadBtnEn.addEventListener("click", async () => {
+
+  if (!imageEn.files[0]) {
+    alert("Select English Image");
+    return;
+  }
+
+  try {
+
+    imageEnURL = await uploadImage(imageEn.files[0]);
+
+    alert("✅ English Image Upload Complete");
+
+    console.log(imageEnURL);
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("❌ English Image Upload Failed");
+
+  }
+
+});
