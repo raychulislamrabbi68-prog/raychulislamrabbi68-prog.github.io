@@ -133,7 +133,7 @@ author: "Raychul Islam Rabbi",
 
     image: imageURL,
     date: new Date().toISOString()
-
+updatedAt: new Date().toISOString()
 });
 
 
