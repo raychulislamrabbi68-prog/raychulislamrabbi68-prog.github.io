@@ -40,14 +40,17 @@ const id = Date.now();
 <p>${blog.summary}</p>
 
 <div>
-<button onclick="showEnglish('${blog.contentEn}')">
+<button onclick="showEnglish('${blog.contentEn}','${id}')">
 🇺🇸 English
 </button>
 
-<button onclick="showBangla('${blog.contentBn}')">
+<button onclick="showBangla('${blog.contentBn}','${id}')">
 🇧🇩 বাংলা
 </button>
-</div>
+
+<p id="languageText-${id}">
+${blog.contentBn}
+</p>
 
 <p id="languageText">
 ${blog.contentBn}
