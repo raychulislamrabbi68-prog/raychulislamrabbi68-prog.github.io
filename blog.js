@@ -96,12 +96,18 @@ blogContainer.innerHTML += `
 
 banglaBtn.addEventListener("click",()=>{
 
+document.getElementById("language-select").style.display = "none";
+blogContainer.style.display = "block";
+
 showBlogs("bn");
 
 });
 
 
 englishBtn.addEventListener("click",()=>{
+
+document.getElementById("language-select").style.display = "none";
+blogContainer.style.display = "block";
 
 showBlogs("en");
 
