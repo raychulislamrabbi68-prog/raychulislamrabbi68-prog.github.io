@@ -14,61 +14,50 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-console.log("Blog page connected to Firebase");
-const blogRef = ref(db, "blogs");
-
-get(blogRef)
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      const blogs = snapshot.val();
-      console.log(blogs);
-    } else {
-      console.log("No blogs found");
-    }
-  })
-  .catch((error) => {
-    console.log(error);
-  });
 const blogContainer = document.getElementById("blog-container");
 
-const blogRef = ref(db, "blogs");
+const blogsRef = ref(db, "blogs");
 
-get(blogRef)
-  .then((snapshot) => {
+get(blogsRef)
+.then((snapshot)=>{
 
-    if (snapshot.exists()) {
+    if(snapshot.exists()){
 
-      const blogs = snapshot.val();
+        const blogs = snapshot.val();
 
-      blogContainer.innerHTML = "";
+        blogContainer.innerHTML = "";
 
-      Object.values(blogs).forEach((blog) => {
+        Object.values(blogs).forEach((blog)=>{
 
-        blogContainer.innerHTML += `
-          <div class="blog-card">
+            blogContainer.innerHTML += `
 
-            <img src="${blog.image}" alt="Blog Image">
+            <div class="blog-card">
 
-            <h2>${blog.title}</h2>
+                <img src="${blog.image}" alt="${blog.title}">
 
-            <p>${blog.content}</p>
+                <h2>${blog.title}</h2>
 
-          </div>
-        `;
+                <p>${blog.summary}</p>
 
-      });
+                <p>${blog.contentBn}</p>
 
-    } else {
+            </div>
 
-      blogContainer.innerHTML = "<h2>No Blog Found</h2>";
+            `;
+
+        });
+
+    }else{
+
+        blogContainer.innerHTML = "<h2>No Blog Found</h2>";
 
     }
 
-  })
-  .catch((error) => {
+})
+.catch((error)=>{
 
     console.log(error);
 
     blogContainer.innerHTML = "<h2>Error Loading Blog</h2>";
 
-  });
+});
