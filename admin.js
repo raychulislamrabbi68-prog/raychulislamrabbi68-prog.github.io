@@ -176,3 +176,47 @@ publishBtn.addEventListener("click", async () => {
     }
 
   }
+  try {
+
+    const blogRef = push(ref(db, "blogs"));
+
+    await set(blogRef, blogData);
+
+    status.innerHTML = "✅ Blog Published Successfully";
+
+    titleBn.value = "";
+    titleEn.value = "";
+
+    categoryBn.value = "";
+    categoryEn.value = "";
+
+    seoTitleBn.value = "";
+    seoTitleEn.value = "";
+
+    metaDescriptionBn.value = "";
+    metaDescriptionEn.value = "";
+
+    keywordsBn.value = "";
+    keywordsEn.value = "";
+
+    summaryBn.value = "";
+    summaryEn.value = "";
+
+    contentBn.value = "";
+    contentEn.value = "";
+
+    imageBn.value = "";
+    imageEn.value = "";
+
+    imageBnURL = "";
+    imageEnURL = "";
+
+  } catch (error) {
+
+    console.error(error);
+
+    status.innerHTML = "❌ Error Saving Blog";
+
+  }
+
+});
