@@ -128,7 +128,7 @@ author: "Raychul Islam Rabbi",
     seoTitle: seoTitle,
     metaDescription: metaDescription,
     keywords: keywords,
-
+    summary: summary,
     contentEn: contentEn,
     contentBn: contentBn,
 
