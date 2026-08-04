@@ -22,6 +22,7 @@ const cloudName = "cxrdogvs";
 const uploadPreset = "blog_upload";
 
 const uploadBtn = document.getElementById("uploadBtn");
+const publishBtn = document.getElementById("publishBtn");
 const imageInput = document.getElementById("image");
 const imagePreview = null;
 
