@@ -138,7 +138,17 @@ await set(blogRef, {
 
 
         status.innerHTML = "✅ Blog Published Successfully";
+titleInput.value = "";
+categoryInput.value = "";
+seoTitleInput.value = "";
+metaDescriptionInput.value = "";
+keywordsInput.value = "";
 
+contentEnInput.value = "";
+contentBnInput.value = "";
+
+imageInput.value = "";
+imageURL = "";
 
     } catch(error){
 
