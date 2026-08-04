@@ -95,7 +95,7 @@ const category = categoryInput.value;
 const seoTitle = seoTitleInput.value.trim();
 const metaDescription = metaDescriptionInput.value.trim();
 const keywords = keywordsInput.value.trim();
-
+const summary = summaryInput.value.trim();
 const contentEn = contentEnInput.value.trim();
 const contentBn = contentBnInput.value.trim();
 
