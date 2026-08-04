@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-
+alert("Firebase Connected");
 const blogContainer = document.getElementById("blog-container");
 
 const banglaBtn = document.getElementById("banglaBtn");
