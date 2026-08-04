@@ -83,8 +83,7 @@ blogContainer.innerHTML += `
 
 <div class="blog-card">
 
-<img src="${blog.image}" alt="Blog Image">
-
+<img src="${language === "en" ? blog.imageEn : blog.imageBn}" alt="Blog Image">
 <h2>${title}</h2>
 
 <p>${summary}</p>
