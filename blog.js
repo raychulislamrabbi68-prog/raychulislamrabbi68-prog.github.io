@@ -28,7 +28,7 @@ get(blogRef)
     blogContainer.innerHTML = "";
 
     Object.values(blogs).forEach((blog) => {
-
+const id = Date.now();
       blogContainer.innerHTML += `
 
       <div class="blog-card">
