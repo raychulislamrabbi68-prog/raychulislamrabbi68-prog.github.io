@@ -73,15 +73,15 @@ ${blog.contentBn}
   blogContainer.innerHTML = "<h2>Error Loading Blog</h2>";
 
 });
-window.showEnglish = function(text){
+window.showEnglish = function(text,id){
 
-document.getElementById("languageText").innerHTML = text;
+document.getElementById(`languageText-${id}`).innerHTML = text;
 
 }
 
 
-window.showBangla = function(text){
+window.showBangla = function(text,id){
 
-document.getElementById("languageText").innerHTML = text;
+document.getElementById(`languageText-${id}`).innerHTML = text;
 
 }
