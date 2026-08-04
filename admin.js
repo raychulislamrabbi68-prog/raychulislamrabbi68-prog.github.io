@@ -89,7 +89,7 @@ const contentBnInput = document.getElementById("contentBn");
 const status = document.getElementById("status");
 
 
-uploadBtn.addEventListener("click", async () => {
+publishBtn.addEventListener("click", async () => {
 console.log("Publish button clicked");
 const title = titleInput.value.trim();
 const category = categoryInput.value;
